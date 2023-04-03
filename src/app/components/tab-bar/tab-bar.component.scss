@@ -1,0 +1,39 @@
+$active-color: var(--red);
+
+.tabs-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .tab {
+        display: flex;
+        flex-direction: column;
+        columns: var(--lighter-black);
+        align-items: center;
+        width: calc(100% / 4);
+
+        .material-icons {
+            color: var(--lighter-black);
+            &-outlined {
+                color: var(--lighter-black);
+            }
+        }
+
+        .label {
+            color: var(--lighter-black);
+        }
+
+        &.active {
+            .material-icons {
+                color: $active-color;
+                &-outlined {
+                    color: $active-color;
+                }
+            }
+    
+            .label {
+                color: $active-color;
+            }
+        }
+    }
+}

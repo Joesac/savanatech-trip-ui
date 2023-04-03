@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="content">
+        <!-- Hero top area -->
+        <div class="hero-container">
+            <div class="light-black"></div>
+            <div class="top-area-content-container">
+                <app-toolbar>
+                    <div role="left">
+                        <span class="header-1">Capture Trips</span>
+                    </div>
+                    <div role="right">
+                        <div class="actions-container">
+                            <span class="material-icons location">place</span>
+                            <span>Delhi</span>
+                            <span class="material-icons">expand_more</span>
+                        </div>
+                    </div>
+                </app-toolbar>
+                <div class="search-container">
+                    <app-search-bar></app-search-bar>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="dynamic-content">
+            <div class="header-1">Top Destinations</div>
+            <div class="destinations-list-container">
+                <app-avatar *ngFor="let place of places" [routerLink]="['/destination', place.id]" [img]="place.img" [desc]="place.desc"></app-avatar>
+            </div>
+
+            <div class="explore-area">
+                <div class="header-1">Explore</div>
+
+                <div class="carousel">
+                    <swiper [slidesPerView]="1" [spaceBetween]="50" [pagination]="{ clickable: true }"
+                        [scrollbar]="{ draggable: true }">
+                        <ng-template swiperSlide>
+                            <img src="../../../assets/explore-1.jpg">
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <img src="../../../assets/explore-2.jpg">
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <img src="../../../assets/explore-3.jpg">
+                        </ng-template>
+                    </swiper>
+                </div>
+            </div>
+
+            <div class="popular-providers">
+                <div class="header-1">Popular Providers</div>
+                <div class="providers-list-container">
+                    <app-avatar [img]="'../../assets/provider-1.jpg'" borderRadius="10%" border="none"
+                        desc="Shimia"></app-avatar>
+                    <app-avatar [img]="'../../assets/provider-2.jpg'" borderRadius="10%" border="none"
+                        desc="Goa"></app-avatar>
+                    <app-avatar [img]="'../../assets/provider-3.jpg'" borderRadius="10%" border="none"
+                        desc="Brazil"></app-avatar>
+                    <app-avatar [img]="'../../assets/provider-4.jpg'" borderRadius="10%" border="none"
+                        desc="Krabi"></app-avatar>
+                    <app-avatar [img]="'../../assets/provider-5.jpg'" borderRadius="10%" border="none"
+                        desc="Hamburg"></app-avatar>
+                </div>
+            </div>
+
+            <div class="departing-container">
+                <div class="header-1">
+                    <span>Departing Soon</span>
+                    <span class="spacer"></span>
+                    <span>SEE ALL</span>
+                </div>
+                <div class="departing-list-container">
+                    <app-avatar [img]="'../../assets/provider-1.jpg'" borderRadius="10px" border="none" width="90vw"
+                        height="180px"></app-avatar>
+                    <app-avatar [img]="'../../assets/provider-2.jpg'" borderRadius="10px" border="none" width="90vw"
+                        height="180px"></app-avatar>
+                    <app-avatar [img]="'../../assets/provider-3.jpg'" borderRadius="10px" border="none" width="90vw"
+                        height="180px"></app-avatar>
+                    <app-avatar [img]="'../../assets/provider-4.jpg'" borderRadius="10px" border="none" width="90vw"
+                        height="180px"></app-avatar>
+                    <app-avatar [img]="'../../assets/provider-5.jpg'" borderRadius="10px" border="none" width="90vw"
+                        height="180px"></app-avatar>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tabs-container">
+        <app-tab-bar></app-tab-bar>
+    </div>
+</div>

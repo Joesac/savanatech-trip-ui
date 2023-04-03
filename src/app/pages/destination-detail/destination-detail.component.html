@@ -1,0 +1,100 @@
+<div class="hero">
+    <!-- <div class="fade"></div> -->
+
+    <div style="position: absolute; width: 100%; z-index: 10;">
+        <app-toolbar>
+            <div role="left">
+                <div class="btn-back" routerLink="/home">
+                    <span class="material-icons btn-search">chevron_left</span>
+                </div>
+            </div>
+            <div role="right">
+                <div class="btn-share">
+                    <span class="material-icons btn-search">share</span>
+                </div>
+            </div>
+        </app-toolbar>
+    </div>
+
+    <div class="carousel">
+        <swiper [slidesPerView]="1" [spaceBetween]="50" [pagination]="{ clickable: true }"
+            [scrollbar]="{ draggable: true }">
+            <ng-template swiperSlide>
+                <img src="../../../assets/explore-1.jpg">
+            </ng-template>
+            <ng-template swiperSlide>
+                <img src="../../../assets/explore-2.jpg">
+            </ng-template>
+            <ng-template swiperSlide>
+                <img src="../../../assets/explore-3.jpg">
+            </ng-template>
+        </swiper>
+    </div>
+</div>
+
+<div class="content">
+    <div class="page-heading-area">
+        <div class="header-1" style="width: 60%">The Best of pattaya & Bankok</div>
+        <div style="width: 40%">
+            <div class="amount">$12,356</div>
+            <div class="per-person">Per Person $18,500</div>
+        </div>
+    </div>
+
+    <div class="loc-rating">
+        <span class="material-icons">place</span>
+        <span>Thailand Base cock</span>
+        <span class="spacer"></span>
+        <span class="material-icons rating-star">star</span>
+        <span class="rating-value">4.2</span>
+    </div>
+
+    <app-divider></app-divider>
+
+    <div class="list-item">
+        <div class="image">
+            <img src="../../../assets/selected-place.jpg" alt="">
+        </div>
+        <div class="details">
+            <div class="title">Jack Smith</div>
+            <div class="description">10th March 2022</div>
+        </div>
+    </div>
+
+    <app-card>
+        <div class="item">
+            <span class="material-icons">place</span>
+            <div class="details">
+                <div class="title">START AT</div>
+                <div class="description">Delhi</div>
+            </div>
+            <span class="spacer"></span>
+            <span class="material-icons">east</span>
+            <span class="spacer"></span>
+            <div class="details end-at">
+                <div class="title">END AT</div>
+                <div class="description">Goa</div>
+            </div>
+        </div>
+
+        <app-divider></app-divider>
+
+        <div class="item no-end-info">
+            <span class="material-icons">date_range</span>
+            <div class="details">
+                <div class="title">DURATION</div>
+                <div class="description">5 Night 6 Days</div>
+            </div>
+        </div>
+
+        <app-divider></app-divider>
+
+        <div class="item no-end-info">
+            <span class="material-icons">boy</span>
+            <div class="details">
+                <div class="title">Physical Rating</div>
+                <div class="description">6 Days</div>
+            </div>
+        </div>
+    </app-card>
+</div>

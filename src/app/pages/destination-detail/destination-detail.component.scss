@@ -1,0 +1,142 @@
+.hero {
+    position: relative;
+    height: 50vh;
+    top: -1rem;
+}
+
+.carousel {
+    height: 50vh;
+}
+
+.btn-back,
+.btn-share {
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+    .material-icons {
+        color: var(--white);
+    }
+}
+
+.content {
+    padding: 0 var(--default-spacing);
+    height: calc(100vh / 2);
+}
+
+.page-heading-area {
+    display: flex;
+    padding-top: var(--default-spacing);
+
+    .amount,
+    .per-person {
+        text-align: right;
+    }
+
+    .amount {
+        color: var(--red);
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .per-person {
+        color: var(--light-black);
+    }
+}
+
+.loc-rating {
+    padding-top: var(--default-spacing);
+    display: flex;
+    align-items: center;
+
+    .material-icons:nth-child(1) {
+        color: red;
+    }
+
+    span:nth-child(2) {
+        color: var(--light-black);
+    }
+
+    .rating-star {
+        color: var(--warning);
+    }
+
+    .rating-value {
+        font-weight: bolder;
+        padding-left: 0.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+.list-item {
+    display: flex;
+    gap: 0.5rem;
+    .image {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .details {
+        flex-basis: calc(90% - 3rem);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .title {
+            font-weight: bold;
+        }
+        .description {
+            color: var(--light-black);
+        }
+    }
+}
+
+app-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--default-spacing);
+
+    .item {
+        display: flex;
+        align-items: center;
+
+        .material-icons {
+            color: var(--black);
+        }
+
+        .details {
+            flex-basis: calc(40% - 3rem);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-left: .5rem;
+
+            .title {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .description {
+                color: var(--light-black);
+            }
+        }
+
+        &.no-end-info {
+            .details {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
